@@ -1,5 +1,163 @@
 @charset "UTF=8";
 
-h1 {
-    color: red;
+html {
+    font-size: 100%;
 }
+body {
+    color: #24292e;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+li {
+    list-style: none;
+}
+
+.header-logo a {
+    display: block;
+    color: darkgrey;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#header {
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+#navi {
+    left: -300px;
+    transition: all 0.5s;
+    z-index: 20;
+    opacity: 0;
+}
+.open #navi {
+    left: 0;
+    opacity: 1;
+}
+.toggle_btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 20;
+}
+.toggle_btn span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+.toggle_btn span:nth-child(1) {
+    top: 10px;
+}
+.toggle_btn span:nth-child(2) {
+    bottom: 10px;
+}
+#mask {
+    display: none;
+    transition: all 0.5s;
+}
+.open #mask{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 10;
+    cursor: pointer;
+}
+#header ul {
+    display: flex;
+}
+#header li {
+    margin-left: 32px;
+}
+#header li a {
+    color: burlywood;
+}
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto 130px auto;
+    font-size: 0.9rem;
+    padding: 0 4%;
+}
+#mainvisual {
+    margin-bottom: 40px;
+}
+#mainvisual img {
+    width: 100%;
+    max-width: 1500px;
+    object-fit: cover;
+}
+.site-title {
+    line-height: 1px;
+}
+.site-title a {
+    display: block;
+}
+.sec-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 65px;
+}
+#about .flex-item{
+    display: flex;
+}
+#about .flex-item .item {
+    width: 50%;
+}
+#about .flex-item .item img {
+    border-radius: 50%;
+}
+#about .flex-item .profile {
+    width: 50%;
+}
+#contact dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+#contact dt {
+    width: 15%;
+}
+#contact dd {
+    width: 85%;
+    margin-bottom: 10px;
+}
+#contact dd input,
+#contact dd textarea {
+    width: 100%;
+    border: solid 1px #c8c8c8;
+    padding: 10px;
+}
+#contact dd textarea {
+    height: 10rem;
+}
+#contact .button {
+    text-align: center;
+}
+#contact .button input {
+    width: 200px;
+    background-color: #24292e;
+    color: #fff;
+    padding: 15px 0;
+    border: solid 1px #24292e;
+}
+#contact .button input:hover {
+    background: #fff;
+    color: #24292e;
+}
+  

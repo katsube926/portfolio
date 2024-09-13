@@ -2,14 +2,31 @@ const http = require("http");
 const PORT = 8000;
 const fs = require('fs');
 const url = require('url');
+const express = require("express");
+const app = express();
+const userRouter = require("../routes/user");
 
 const indexPage = fs.readFileSync('./index.html', 'UTF-8');
 const styleCss = fs.readFileSync('./css/style.css', 'UTF-8');
 const scriptJs = fs.readFileSync('./script.js', 'UTF-8');
 const server = http.createServer(RouteSetting);
 
-server.listen(PORT, () => {
-    console.log("server runnung!");
+app.use(express.static(__dirname));
+
+
+app.get("/", (req, res) => {
+    //    console.log("hellow express");
+    //    res.send("<h1>こんにちは</h1>");
+    //    res.sendStatus(404);
+    //    res.status(500).send("エラーです。");
+    res.status(500).json({ msg: "エラーです。"});
+});
+//  routing
+app.use("/user", userRouter);
+
+
+app.listen(PORT, () => {
+    console.log("server running!");
 });
 
 function RouteSetting(req, res) {
@@ -26,7 +43,7 @@ function RouteSetting(req, res) {
             res.write(styleCss);
             res.end();
             break;
-        case '/js/script.js':
+        case '/script.js':
             res.writeHead(200, {'Content-Type':'application/javascript'});
             res.write(scriptJs);
             res.end();

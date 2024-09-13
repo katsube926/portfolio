@@ -11,5 +11,9 @@
   "description": "",
   "devDependencies": {
     "http": "^0.0.1-security"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "nodemon": "^3.1.4"
   }
 }

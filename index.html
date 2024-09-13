@@ -9,8 +9,64 @@
     <script src="./script.js"></script>
 </head>
 <body>
-    <section>
-        <h1>制作中...。</h1>
-    </section>
+    <header id="header">
+        <h1 class="header-logo"><a href="index.html">Katsube<br>Takuro</a>
+        </h1>
+        <nav id="navi">
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="toggle_btn">
+            <span></span>
+            <span></span>
+        </div>
+    
+        <div id="mask"></div>
+    </header>
+    <main>
+        <div id="mainvisual">
+            <img src="https://picsum.photos/id/26/1000/400" alt="">
+        </div>
+        <section id="about" class="wrapper">
+            <h2 class="sec-title">About</h2>
+            <div class="flex-item">
+                <div class="item">
+                    <img src="https://picsum.photos/id/91/200/200">
+                </div>
+                <div class="profile">
+                <p>ここにプロフィール等々を書く</p>
+                </div>
+            </div>
+        </section>
+        <section id="works" class="wrapper">
+            <h2 class="sec-title">Works</h2>
+            <p>ここに経歴を書く</p>
+        </section>
+        <section id="blog" class="wrapper">
+            <h2 class="sec-title">Blog</h2>
+            <p>まだ記事はありません。</p>
+        </section>
+        <section id="contact" class="wrapper">
+            <h2 class="sec-title">Contact</h2>
+            <form action="#" method="post">
+              <dl>
+                <dt><label for="name">NAME</label></dt>
+                <dd><input type="text" id="name" name="your-name"></dd>
+                <dt><label for="email">E-mail</label></dt>
+                <dd><input type="email" id="email" name="your-email"></dd>
+                <dt><label for="message">MESSAGE</label></dt>
+                <dd><textarea id="message" name="your-message"></textarea></dd>
+              </dl>
+              <div class="button"><input type="submit" value="送信"></div>
+            </form>
+          </section>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2024 </p>
+    </footer>
 </body>
 </html>
