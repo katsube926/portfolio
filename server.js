@@ -26,7 +26,7 @@ app.use("/user", userRouter);
 
 
 app.listen(PORT, () => {
-    console.log("server running!");
+    console.log("server run!");
 });
 
 function RouteSetting(req, res) {
